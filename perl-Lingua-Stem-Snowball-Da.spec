@@ -16,7 +16,6 @@ BuildRequires:	perl-devel
 %endif
 Requires:	locales-da
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The stem function takes a scalar as a parameter and stems the word according to

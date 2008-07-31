@@ -1,7 +1,7 @@
 %define module	Lingua-Stem-Snowball-Da
 %define name	perl-%{module}
 %define version 1.01
-%define release %mkrel 8
+%define release %mkrel 9
 
 Name:		%{name}
 Version:	%{version}

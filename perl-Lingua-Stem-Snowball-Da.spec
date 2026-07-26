@@ -1,15 +1,13 @@
 %define upstream_name	 Lingua-Stem-Snowball-Da
-%define upstream_version 1.01
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	1.01
+Release:	6
 
 Summary:	Porters stemming algorithm for Denmark
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:        https://metacpan.org/dist/Lingua-Stem-Snowball-Da
-Source0:	https://cpan.metacpan.org/authors/id/C/CI/CINE/Lingua-Stem-Snowball-Da-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CI/CINE/Lingua-Stem-Snowball-Da-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ Martin Porters Danish stemming algorithm, which can be found at the Snowball
 website: http://snowball.tartarus.org/.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -45,9 +43,7 @@ mv %{buildroot}%{perl_vendorlib}/Lingua/Stem/Snowball/stemmer.pl \
 %changelog
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.10.0-1mdv2010.0
 + Revision: 403391
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.01-9mdv2009.0
+- rebuild using %1.01 Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 1.01-9mdv2009.0
 + Revision: 257600
 - rebuild
 
